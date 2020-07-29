@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect } from 'react'; // importing Functi
 import { Book } from './book';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/esm/Button';
+import { Link } from 'react-router-dom';
 
 interface BookProps {
     books: Array<Book>;
@@ -28,7 +29,11 @@ export const BooksList: FunctionComponent<BookProps> = ({ books }: { books: Arra
                             {books.map(book => (
                                 <tr key={book._id}>
                                     <td>{book.name}</td>
-                                    <td><Button>View</Button></td>
+                                    <td>
+                                        <Link to={`/book/${book._id}`}>
+                                            <Button className="mr-2">View</Button>
+                                        </Link>
+                                    </td>
                                     <td><Button>Edit</Button></td>
                                 </tr>
                             ))}

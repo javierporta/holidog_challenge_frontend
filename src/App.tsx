@@ -1,7 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Home } from './home/home';
+import { Home } from './routes/home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { BookDetails } from './routes/book-details';
 
 function App() {
   return (
@@ -11,7 +18,16 @@ function App() {
         <h1>Holidog Challange - Frontend</h1>
         <small>Made with react create by Javier Portaluppi</small>
       </header>
-      <Home />
+      <Router>
+        <Switch>
+          <Route path="/book/:id">
+            <BookDetails />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

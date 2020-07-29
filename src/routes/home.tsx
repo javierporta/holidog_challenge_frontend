@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { BooksList } from '../books/books-list';
 import axios from 'axios';
 import { API_URL } from '../api';
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,7 +32,7 @@ export const Home: FunctionComponent = () => {
         <BooksList books={booksList}></BooksList>
 
 
-        <Button className="mr-2">Add new book</Button>
+        <Link to="/book/test"><Button className="mr-2">Add new book</Button></Link>
         <Button>Add new author</Button>
     </aside>
 }
