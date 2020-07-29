@@ -33,6 +33,6 @@ export const Home: FunctionComponent = () => {
 
 
         <Link to="/book/test"><Button className="mr-2">Add new book</Button></Link>
-        <Button>Add new author</Button>
+        <Link to="/authors"><Button>Authors List</Button></Link>
     </div>
 }

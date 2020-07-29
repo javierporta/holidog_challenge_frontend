@@ -8,6 +8,7 @@ import {
   Route
 } from "react-router-dom";
 import { BookDetails } from './routes/book-details';
+import { AuthorsList } from './routes/authors-list';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           <Switch>
             <Route path="/book/:id">
               <BookDetails />
+            </Route>
+            <Route path="/authors">
+              <AuthorsList />
             </Route>
             <Route path="/">
               <Home />
