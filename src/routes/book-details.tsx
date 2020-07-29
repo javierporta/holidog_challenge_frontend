@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 import { API_URL } from '../api';
 import { Link, useParams } from 'react-router-dom';
@@ -43,20 +44,42 @@ export const BookDetails: FunctionComponent = () => {
     return <div>
         <h2>Book Details</h2>
         {wasLoaded && !hasError &&
-            <div>
+            <Card bg={"dark"} style={{ width: '40rem' }} className="mx-auto p-4">
                 {bookDetails && bookDetails._id &&
                     <div>
-                        <form>
-                            {bookDetails.name}
+                        <form >
+                            <div className="form-group">
+                                <Card.Header as="h5">Name: {bookDetails.name}</Card.Header>
+                            </div>
+                            <div className="form-group">
+                                <label className="font-weight-bold mr-1">ISBN:</label>
+                                <label>{bookDetails.isbn}</label>
+                            </div>
+
+                            {bookDetails.author[0] &&
+                                <div>
+                                    <strong>Author</strong>
+                                    <div className="form-group">
+                                        <label className="font-weight-bold mr-1">First Name:</label>
+                                        <label>{bookDetails.author[0].firstName}</label>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="font-weight-bold mr-1">Last Name:</label>
+                                        <label>{bookDetails.author[0].lastName}</label>
+                                    </div>
+
+                                </div>
+                            }
                         </form>
 
                         <Link to="/home" className="mr-2"><Button>Back</Button></Link>
                         <Button>Save</Button>
                     </div>
                 }
-            </div>
+            </Card>
         }
-        {wasLoaded && hasError &&
+        {
+            wasLoaded && hasError &&
             <NotFound></NotFound>
         }
 

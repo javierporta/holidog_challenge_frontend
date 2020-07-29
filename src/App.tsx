@@ -5,8 +5,7 @@ import { Home } from './routes/home';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import { BookDetails } from './routes/book-details';
 
@@ -18,16 +17,18 @@ function App() {
         <h1>Holidog Challange - Frontend</h1>
         <small>Made with react create by Javier Portaluppi</small>
       </header>
-      <Router>
-        <Switch>
-          <Route path="/book/:id">
-            <BookDetails />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+      <div className="jumbotron App-content">
+        <Router>
+          <Switch>
+            <Route path="/book/:id">
+              <BookDetails />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
       <footer className="mt-4 mb-4">
         <small>Javier Portaluppi</small>
       </footer>

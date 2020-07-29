@@ -29,3 +29,7 @@
     transform: rotate(360deg);
   }
 }
+
+.App-content{
+  background-color: #0b0d17;
+}
