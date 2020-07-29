@@ -26,7 +26,7 @@ export const Home: FunctionComponent = () => {
 
     }, [])
 
-    return <aside>
+    return <div>
         <h2>Books List</h2>
 
         <BooksList books={booksList}></BooksList>
@@ -34,5 +34,5 @@ export const Home: FunctionComponent = () => {
 
         <Link to="/book/test"><Button className="mr-2">Add new book</Button></Link>
         <Button>Add new author</Button>
-    </aside>
+    </div>
 }

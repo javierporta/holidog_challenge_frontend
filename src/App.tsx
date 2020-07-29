@@ -28,7 +28,11 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <footer className="mt-4 mb-4">
+        <small>Javier Portaluppi</small>
+      </footer>
     </div>
+
   );
 }
 

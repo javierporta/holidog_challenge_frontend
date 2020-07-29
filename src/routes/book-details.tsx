@@ -25,7 +25,7 @@ export const BookDetails: FunctionComponent = () => {
 
     }, [])
 
-    return <aside>
+    return <div>
         <h2>Book Details</h2>
 
         <form>
@@ -36,5 +36,5 @@ export const BookDetails: FunctionComponent = () => {
         <Button>Save</Button>
 
 
-    </aside>
+    </div>
 }

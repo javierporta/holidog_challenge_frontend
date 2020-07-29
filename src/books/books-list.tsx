@@ -15,7 +15,7 @@ export const BooksList: FunctionComponent<BookProps> = ({ books }: { books: Arra
         console.log(books);
     });
 
-    return <aside>
+    return <div>
         {books && books.length > 0 &&
             <div className="row justify-content-center">
                 <div className="col-auto">
@@ -44,5 +44,5 @@ export const BooksList: FunctionComponent<BookProps> = ({ books }: { books: Arra
 
 
         }
-    </aside>
+    </div>
 }
