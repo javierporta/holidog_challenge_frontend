@@ -42,7 +42,10 @@ export const BookDetails: FunctionComponent = () => {
     }, [])
 
     return <div>
-        <h2>Book Details</h2>
+        <div style={{ width: '40rem' }} className="mx-auto">
+            <Link to="/home" className="float-left mr-2"><Button>Back</Button></Link>
+            <h2>Book Details</h2>
+        </div>
         {wasLoaded && !hasError &&
             <Card bg={"dark"} style={{ width: '40rem' }} className="mx-auto p-4">
                 {bookDetails && bookDetails._id &&
@@ -72,8 +75,7 @@ export const BookDetails: FunctionComponent = () => {
                             }
                         </form>
 
-                        <Link to="/home" className="mr-2"><Button>Back</Button></Link>
-                        <Button>Save</Button>
+
                     </div>
                 }
             </Card>
