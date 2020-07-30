@@ -19,7 +19,7 @@ function App() {
       <header className="App-header text-center">
         <img src={logo} className="App-logo mt-2" alt="logo" />
         <h1>Holidog Challange - Frontend</h1>
-        <small>Made with react create by Javier Portaluppi</small>
+        <small>Made with <i>create-react-app</i> by <strong>Javier Portaluppi</strong> <span>&#9996;</span></small>
       </header>
       <div className="jumbotron App-content">
         <Router>
@@ -43,7 +43,13 @@ function App() {
         </Router>
       </div>
       <footer className="mt-4 mb-4">
-        <small>Javier Portaluppi</small>
+        <small>
+          <a className="text-white" href="mailto:javierporta@hotmail.com"><span>&#9993;</span> Javier Portaluppi</a>
+        </small>
+        <div>
+          <a className="text-white" target="_blank" href="https://github.com/javierporta"><span>&#x1F4BB;</span> Github
+          </a>
+        </div>
       </footer>
     </div>
 
