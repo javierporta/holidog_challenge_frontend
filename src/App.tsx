@@ -1,14 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Home } from './routes/home';
+import { Home } from './books/books-view';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { BookDetails } from './routes/book-details';
-import { AuthorsList } from './routes/authors-list';
+
+import { AuthorsList } from './authors/authors-view';
+import { BookDetails } from './books/book-details-view';
 
 function App() {
   return (

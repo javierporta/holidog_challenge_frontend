@@ -1,10 +1,9 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import { BooksList } from '../books/books-list';
 import axios from 'axios';
 import { API_URL } from '../api';
 import { Link } from 'react-router-dom';
-import { AuthorsTable } from '../authors/authors-table';
+import { AuthorsTable } from './authors-view-list';
 
 
 export const AuthorsList: FunctionComponent = () => {
