@@ -135,7 +135,7 @@ export const BookForm: FunctionComponent = () => {
                     <Form.Group controlId="authorSelectId">
                         <Form.Label>Select an author</Form.Label>
                         <Form.Control as="select" value={currentAuthorId} onChange={(e) => handleSelectChange(e)} >
-                            <option value="" selected disabled hidden>Choose here</option>
+                            <option value="" disabled hidden>Choose here</option>
                             {
                                 authors.map((author) =>
                                     <option key={author._id} value={author._id}>{author.lastName}, {author.firstName}</option>)
