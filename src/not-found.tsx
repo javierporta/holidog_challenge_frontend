@@ -11,6 +11,6 @@ export const NotFound: FunctionComponent = () => {
         <h2>Oops!</h2>
         <h3>There was some issue =(</h3>
 
-        <Link to="/home" className="mr-2"><Button>Home</Button></Link>
+        <Link to="/" className="mr-2"><Button>Home</Button></Link>
     </div>
 }

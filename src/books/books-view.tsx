@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export const Home: FunctionComponent = () => {
+export const BookView: FunctionComponent = () => {
 
     const [booksList, setBooksList] = useState([]);
 
@@ -32,7 +32,7 @@ export const Home: FunctionComponent = () => {
         <BooksList books={booksList}></BooksList>
 
 
-        <Link to="/book/test"><Button className="mr-2">Add new book</Button></Link>
+        <Link to="/books/new/form"><Button className="mr-2">Add new book</Button></Link>
         <Link to="/authors"><Button>Authors List</Button></Link>
     </div>
 }

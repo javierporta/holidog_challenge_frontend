@@ -43,7 +43,7 @@ export const BookDetails: FunctionComponent = () => {
 
     return <div>
         <div style={{ width: '40rem' }} className="mx-auto">
-            <Link to="/home" className="float-left mr-2"><Button>Back</Button></Link>
+            <Link to="/" className="float-left mr-2"><Button>Back</Button></Link>
             <h2>Book Details</h2>
         </div>
         {wasLoaded && !hasError &&

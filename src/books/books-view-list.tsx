@@ -30,11 +30,15 @@ export const BooksList: FunctionComponent<BookProps> = ({ books }: { books: Arra
                                 <tr key={book._id}>
                                     <td>{book.name}</td>
                                     <td>
-                                        <Link to={`/book/${book._id}`}>
+                                        <Link to={`/books/${book._id}`}>
                                             <Button className="mr-2">View</Button>
                                         </Link>
                                     </td>
-                                    <td><Button>Edit</Button></td>
+                                    <td>
+                                        <Link to={`/books/${book._id}/form`}>
+                                            <Button >Edit</Button>
+                                        </Link>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>

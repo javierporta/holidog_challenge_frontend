@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Home } from './books/books-view';
+import { BookView } from './books/books-view';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,6 +11,7 @@ import {
 import { AuthorsList } from './authors/authors-view';
 import { BookDetails } from './books/book-details-view';
 import { AuthorForm } from './authors/author-form';
+import { BookForm } from './books/book-form';
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
       <div className="jumbotron App-content">
         <Router>
           <Switch>
-            <Route path="/book/:id">
+            <Route exact path="/books/:id">
               <BookDetails />
+            </Route>
+            <Route path="/books/:id/form">
+              <BookForm />
             </Route>
             <Route exact path="/authors">
               <AuthorsList />
@@ -33,7 +37,7 @@ function App() {
               <AuthorForm />
             </Route>
             <Route path="/">
-              <Home />
+              <BookView />
             </Route>
           </Switch>
         </Router>

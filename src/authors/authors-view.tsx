@@ -28,7 +28,7 @@ export const AuthorsList: FunctionComponent = () => {
     return <div>
 
         <div className="row justify-content-center">
-            <Link to="/home" className="float-left col-auto"><Button>Back</Button></Link>
+            <Link to="/" className="float-left col-auto"><Button>Back</Button></Link>
             <h2 className="col-auto">Authors List</h2>
         </div>
 
