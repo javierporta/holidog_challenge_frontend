@@ -76,7 +76,6 @@ export const BookForm: FunctionComponent = () => {
     const updateBook = (bookToUpdate: Book) => {
         axios.put(`${API_URL}/books/${bookToUpdate._id}`, bookToUpdate)
             .then(function (response) {
-                console.log(response);
 
                 alert('Updated');
 
@@ -84,7 +83,6 @@ export const BookForm: FunctionComponent = () => {
                 history.push('/books');
             })
             .catch(function (error) {
-                console.log(error);
                 alert('Error updating');
             });
     }
@@ -92,14 +90,14 @@ export const BookForm: FunctionComponent = () => {
     const addNewBook = (newBook: Book,) => {
         axios.post(`${API_URL}/books`, newBook)
             .then(function (response) {
-                console.log(response);
+
 
                 alert('Saved');
                 //redirect after success
                 history.push('/');
             })
             .catch(function (error) {
-                console.log(error);
+                console.error(error);
                 alert('Error saving');
             });
     }

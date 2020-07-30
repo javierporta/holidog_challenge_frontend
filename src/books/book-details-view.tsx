@@ -23,7 +23,6 @@ export const BookDetails: FunctionComponent = () => {
                 const result = await axios(
                     `${API_URL}/books/${id}`
                 );
-                console.log(result);
                 if (result.data) {
                     setBookDetails(result.data);
                     setHasError(false)

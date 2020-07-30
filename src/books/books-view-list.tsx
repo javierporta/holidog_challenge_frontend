@@ -9,12 +9,6 @@ interface BookProps {
 }
 
 export const BooksList: FunctionComponent<BookProps> = ({ books }: { books: Array<Book> }) => {
-
-    useEffect(() => {
-        console.log('rendered');
-        console.log(books);
-    });
-
     return <div>
         {books && books.length > 0 &&
             <div className="row justify-content-center">

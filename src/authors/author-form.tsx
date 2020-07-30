@@ -54,7 +54,6 @@ export const AuthorForm: FunctionComponent = () => {
     const updateAuthor = (authorToUpdate: Author) => {
         axios.put(`${API_URL}/authors/${authorToUpdate._id}`, authorToUpdate)
             .then(function (response) {
-                console.log(response);
 
                 alert('Updated');
 
@@ -62,7 +61,7 @@ export const AuthorForm: FunctionComponent = () => {
                 history.push('/authors');
             })
             .catch(function (error) {
-                console.log(error);
+                console.error(error);
                 alert('Error updating');
             });
     }
@@ -70,21 +69,19 @@ export const AuthorForm: FunctionComponent = () => {
     const addNewAuthor = (newAuthor: Author) => {
         axios.post(`${API_URL}/authors`, newAuthor)
             .then(function (response) {
-                console.log(response);
 
                 alert('Saved');
                 //redirect after success
                 history.push('/authors');
             })
             .catch(function (error) {
-                console.log(error);
+                console.error(error);
                 alert('Error saving');
             });
     }
 
     const handleFormChange = (event: any, prop: string) => {
         setAuthor({ ...author, [prop]: event.target.value });
-        console.log(author);
     }
 
 
