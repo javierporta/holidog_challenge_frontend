@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect } from 'react'; // importing FunctionComponent
+import React, { FunctionComponent } from 'react'; // importing FunctionComponent
 import { Book } from './book';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/esm/Button';
