@@ -10,6 +10,7 @@ import {
 
 import { AuthorsList } from './authors/authors-view';
 import { BookDetails } from './books/book-details-view';
+import { AuthorForm } from './authors/author-form';
 
 function App() {
   return (
@@ -25,8 +26,11 @@ function App() {
             <Route path="/book/:id">
               <BookDetails />
             </Route>
-            <Route path="/authors">
+            <Route exact path="/authors">
               <AuthorsList />
+            </Route>
+            <Route path="/authors/:id/form">
+              <AuthorForm />
             </Route>
             <Route path="/">
               <Home />

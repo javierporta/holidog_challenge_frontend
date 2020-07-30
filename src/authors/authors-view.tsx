@@ -35,6 +35,6 @@ export const AuthorsList: FunctionComponent = () => {
 
         <AuthorsTable authors={authorsList}></AuthorsTable>
 
-        <Link to="/author/test"><Button>Add New Author</Button></Link>
+        <Link to="/authors/new/form"><Button>Add New Author</Button></Link>
     </div>
 }

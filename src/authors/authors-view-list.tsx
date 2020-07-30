@@ -27,11 +27,10 @@ export const AuthorsTable: FunctionComponent<AuthorProps> = ({ authors }: { auth
                                     <td>{author.firstName}</td>
                                     <td>{author.lastName}</td>
                                     <td>
-                                        <Link to={`/book/${author._id}`}>
-                                            <Button className="mr-2">View</Button>
+                                        <Link to={`/authors/${author._id}/form`}>
+                                            <Button className="mr-2">Edit</Button>
                                         </Link>
                                     </td>
-                                    <td><Button>Edit</Button></td>
                                 </tr>
                             ))}
                         </tbody>

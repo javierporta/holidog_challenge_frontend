@@ -50,31 +50,29 @@ export const BookDetails: FunctionComponent = () => {
             <Card bg={"dark"} style={{ width: '40rem' }} className="mx-auto p-4">
                 {bookDetails && bookDetails._id &&
                     <div>
-                        <form >
-                            <div className="form-group">
-                                <Card.Header as="h5">Name: {bookDetails.name}</Card.Header>
-                            </div>
-                            <div className="form-group">
-                                <label className="font-weight-bold mr-1">ISBN:</label>
-                                <label>{bookDetails.isbn}</label>
-                            </div>
 
-                            {bookDetails.author[0] &&
-                                <div>
-                                    <strong>Author</strong>
-                                    <div className="form-group">
-                                        <label className="font-weight-bold mr-1">First Name:</label>
-                                        <label>{bookDetails.author[0].firstName}</label>
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="font-weight-bold mr-1">Last Name:</label>
-                                        <label>{bookDetails.author[0].lastName}</label>
-                                    </div>
+                        <div className="form-group">
+                            <Card.Header as="h5">Name: {bookDetails.name}</Card.Header>
+                        </div>
+                        <div className="form-group">
+                            <label className="font-weight-bold mr-1">ISBN:</label>
+                            <label>{bookDetails.isbn}</label>
+                        </div>
 
+                        {bookDetails.author[0] &&
+                            <div>
+                                <strong>Author</strong>
+                                <div className="form-group">
+                                    <label className="font-weight-bold mr-1">First Name:</label>
+                                    <label>{bookDetails.author[0].firstName}</label>
                                 </div>
-                            }
-                        </form>
+                                <div className="form-group">
+                                    <label className="font-weight-bold mr-1">Last Name:</label>
+                                    <label>{bookDetails.author[0].lastName}</label>
+                                </div>
 
+                            </div>
+                        }
 
                     </div>
                 }
