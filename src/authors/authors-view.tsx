@@ -3,10 +3,10 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import { API_URL } from '../api';
 import { Link } from 'react-router-dom';
-import { AuthorsTable } from './authors-view-list';
+import { AuthorsViewList } from './authors-view-list';
 
 
-export const AuthorsList: FunctionComponent = () => {
+export const AuthorsView: FunctionComponent = () => {
 
     const [authorsList, setAuthorsList] = useState([]);
 
@@ -32,8 +32,7 @@ export const AuthorsList: FunctionComponent = () => {
             <h2 className="col-auto">Authors List</h2>
         </div>
 
-
-        <AuthorsTable authors={authorsList}></AuthorsTable>
+        <AuthorsViewList authors={authorsList}></AuthorsViewList>
 
         <Link to="/authors/new/form"><Button>Add New Author</Button></Link>
     </div>

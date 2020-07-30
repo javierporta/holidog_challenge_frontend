@@ -9,7 +9,7 @@ import { NotFound } from '../not-found';
 
 
 
-export const BookDetails: FunctionComponent = () => {
+export const BookDetailsView: FunctionComponent = () => {
 
     const [bookDetails, setBookDetails] = useState<Book>({} as Book);
     const [wasLoaded, setWasLoaded] = useState(false);

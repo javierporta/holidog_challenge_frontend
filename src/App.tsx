@@ -8,8 +8,8 @@ import {
   Route
 } from "react-router-dom";
 
-import { AuthorsList } from './authors/authors-view';
-import { BookDetails } from './books/book-details-view';
+import { AuthorsView } from './authors/authors-view';
+import { BookDetailsView } from './books/book-details-view';
 import { AuthorForm } from './authors/author-form';
 import { BookForm } from './books/book-form';
 
@@ -25,13 +25,13 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/books/:id">
-              <BookDetails />
+              <BookDetailsView />
             </Route>
             <Route path="/books/:id/form">
               <BookForm />
             </Route>
             <Route exact path="/authors">
-              <AuthorsList />
+              <AuthorsView />
             </Route>
             <Route path="/authors/:id/form">
               <AuthorForm />

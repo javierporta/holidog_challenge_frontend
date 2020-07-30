@@ -8,7 +8,7 @@ interface BookProps {
     books: Array<Book>;
 }
 
-export const BooksList: FunctionComponent<BookProps> = ({ books }: { books: Array<Book> }) => {
+export const BooksViewList: FunctionComponent<BookProps> = ({ books }: { books: Array<Book> }) => {
     return <div>
         {books && books.length > 0 &&
             <div className="row justify-content-center">

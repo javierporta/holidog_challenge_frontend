@@ -8,7 +8,7 @@ interface AuthorProps {
     authors: Array<Author>;
 }
 
-export const AuthorsTable: FunctionComponent<AuthorProps> = ({ authors }: { authors: Array<Author> }) => {
+export const AuthorsViewList: FunctionComponent<AuthorProps> = ({ authors }: { authors: Array<Author> }) => {
 
     return <div>
         {authors && authors.length > 0 &&

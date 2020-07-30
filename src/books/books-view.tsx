@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import { BooksList } from './books-view-list';
+import { BooksViewList } from './books-view-list';
 import axios from 'axios';
 import { API_URL } from '../api';
 import { Link } from 'react-router-dom';
@@ -29,7 +29,7 @@ export const BookView: FunctionComponent = () => {
     return <div>
         <h2>Books List</h2>
 
-        <BooksList books={booksList}></BooksList>
+        <BooksViewList books={booksList}></BooksViewList>
 
 
         <Link to="/books/new/form"><Button className="mr-2">Add new book</Button></Link>
