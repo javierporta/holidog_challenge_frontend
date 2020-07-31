@@ -1,11 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
 import { Routes } from './routes';
 
 
@@ -25,7 +20,7 @@ function App() {
           <a className="text-white" href="mailto:javierporta@hotmail.com"><span>&#9993;</span> Javier Portaluppi</a>
         </small>
         <div>
-          <a className="text-white" target="_blank" href="https://github.com/javierporta"><span>&#x1F4BB;</span> Github
+          <a className="text-white" target="_blank" href="https://github.com/javierporta" rel="noopener noreferrer"><span>&#x1F4BB;</span> Github
           </a>
         </div>
       </footer>

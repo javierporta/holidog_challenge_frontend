@@ -38,7 +38,7 @@ export const BookDetailsView: FunctionComponent = () => {
 
         fetchData();
 
-    }, [])
+    }, [id])
 
     return <div>
         <div style={{ width: '40rem' }} className="mx-auto">

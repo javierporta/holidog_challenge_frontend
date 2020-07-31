@@ -54,7 +54,7 @@ export const BookForm: FunctionComponent = () => {
         }
         getAuthors();
 
-    }, [])
+    }, [id])
 
 
 
