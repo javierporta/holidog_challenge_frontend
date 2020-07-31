@@ -1,17 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BookView } from './books/books-view';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+import { Routes } from './routes';
 
-import { AuthorsView } from './authors/authors-view';
-import { BookDetailsView } from './books/book-details-view';
-import { AuthorForm } from './authors/author-form';
-import { BookForm } from './books/book-form';
 
 function App() {
   return (
@@ -22,25 +18,7 @@ function App() {
         <small>Made with <i>create-react-app</i> by <strong>Javier Portaluppi</strong> <span>&#9996;</span></small>
       </header>
       <div className="jumbotron App-content">
-        <Router>
-          <Switch>
-            <Route exact path="/books/:id">
-              <BookDetailsView />
-            </Route>
-            <Route path="/books/:id/form">
-              <BookForm />
-            </Route>
-            <Route exact path="/authors">
-              <AuthorsView />
-            </Route>
-            <Route path="/authors/:id/form">
-              <AuthorForm />
-            </Route>
-            <Route path="/">
-              <BookView />
-            </Route>
-          </Switch>
-        </Router>
+        <Routes></Routes>
       </div>
       <footer className="mt-4 mb-4">
         <small>
